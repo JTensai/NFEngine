@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameObjects">
+      <UniqueIdentifier>{3df446da-cf04-4e8f-964f-4002965c85db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCore">
+      <UniqueIdentifier>{12416299-ec7f-47d9-8632-0b2ec7d4098f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Unsorted">
+      <UniqueIdentifier>{4501e3d1-1c11-48c6-bd57-87fc269ca164}</UniqueIdentifier>
+      <Extensions>cpp;c;h;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Crayon.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.c">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CrayonBox.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Wheel.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Crayon.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CrayonBox.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Wheel.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
