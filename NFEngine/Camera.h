@@ -15,7 +15,7 @@ public:
 	Camera::Camera(const glm::vec3& position, float fov, float aspect, float near_clippling_plane, float far_clipping_plane) {
 		this->transform = Transform();
 		this->transform.translate(position);
-		this->transform.rotate(-100.f, getUp());
+		this->transform.rotateDegrees(-100.f, getUp());
 
 		//m_perspective_matrix = glm::perspective(fov, aspect, near_clippling_plane, far_clipping_plane); // would need to move this if the camera can be modified at run time
 		updatePerspectiveMatrix(fov, aspect, near_clippling_plane, far_clipping_plane); // would need to move this if the camera can be modified at run time
