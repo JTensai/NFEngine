@@ -69,7 +69,7 @@ void Car::update(float delta_seconds) {
 	}
 	wheel_angle_last_frame = wheel_angle;
 
-	this->transform.rotate(1.f, glm::vec3(0, 1, 0));
+	this->transform.rotateDegrees(1.f, glm::vec3(0, 1, 0));
 
 }
 
