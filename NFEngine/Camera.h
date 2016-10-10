@@ -84,14 +84,14 @@ public:
 		glm::vec3 translation;
 		float y_angle = 0.f;
 		float x_angle = 0.f;
-		if (input.w_pressed)
+		/*if (input.w_pressed)
 			translation += m_camera_move_speed * this->getForward();
 		if (input.s_pressed)
 			translation -= m_camera_move_speed * this->getForward();
 		if (input.a_pressed)
 			translation -= m_camera_move_speed * this->getRight();
 		if (input.d_pressed)
-			translation += m_camera_move_speed * this->getRight();
+			translation += m_camera_move_speed * this->getRight();*/
 		if (input.r_pressed)
 			translation += m_camera_move_speed * glm::vec3(0, 0.5f, 0);
 		if (input.f_pressed)

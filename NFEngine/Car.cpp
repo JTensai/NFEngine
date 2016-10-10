@@ -62,6 +62,60 @@ void Car::update(float delta_seconds) {
 		straightenWheels();
 	}
 
+
+	glm::vec3 translation = glm::vec3(0.f);
+	float rotation_degrees = 0.f;
+	float car_move_speed = 0.03f;
+	bool car_is_drifting = true;
+
+	if (InputManager::getInputManager().w_pressed) {
+		car_is_drifting = false;
+		if (velocity < max_speed)
+			velocity += acceleration * 2.f;
+		//translation += velocity * transform.getForward();
+		/*front_left->spinForwards(car_move_speed);
+		front_right->spinForwards(car_move_speed);
+		back_left->spinForwards(car_move_speed);
+		back_right->spinForwards(car_move_speed);*/
+		rotation_degrees += wheel_angle * velocity;
+	}
+	if (InputManager::getInputManager().s_pressed) {
+		car_is_drifting = false;
+		if (velocity > -max_speed / 4)
+			if (velocity > 0)
+				velocity -= acceleration * 3.f;
+			else
+				velocity -= acceleration * 1.5f;
+		//translation -= velocity * transform.getForward();
+		/*front_left->spinBackwards(car_move_speed);
+		front_right->spinBackwards(car_move_speed);
+		back_left->spinBackwards(car_move_speed);
+		back_right->spinBackwards(car_move_speed);*/
+		rotation_degrees -= wheel_angle * velocity;
+	}
+	if (car_is_drifting && velocity != 0) {
+		if (velocity > 0) {
+			velocity -= acceleration;
+			if (velocity < 0)
+				velocity = 0;
+		}
+		else {
+			velocity += acceleration;
+			if (velocity > 0)
+				velocity = 0;
+		}
+	}
+
+	translation += velocity * transform.getForward();
+
+	//if (InputManager::getInputManager().a_pressed)
+	//	translation -= car_move_speed * transform.getRight();
+	//if (InputManager::getInputManager().d_pressed)
+	//	translation += car_move_speed * transform.getRight();
+
+	transform.translate(translation);
+	transform.rotateDegrees(rotation_degrees, transform.getUp());
+
 	// adjust wheel rotations if it has changed
 	if (wheel_angle != wheel_angle_last_frame) {
 		front_left->setWheelAngle(wheel_angle);
@@ -69,7 +123,7 @@ void Car::update(float delta_seconds) {
 	}
 	wheel_angle_last_frame = wheel_angle;
 
-	this->transform.rotateDegrees(1.f, glm::vec3(0, 1, 0));
+	//this->transform.rotateDegrees(1.f, glm::vec3(0, 1, 0));
 
 }
 

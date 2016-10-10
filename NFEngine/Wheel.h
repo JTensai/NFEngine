@@ -7,6 +7,8 @@ public:
 	Wheel(float initial_rotation);
 	
 	void setWheelAngle(float angle);
+	void spinForwards(float speed);
+	void spinBackwards(float speed);
 
 	void Wheel::update(float);
 	virtual ~Wheel();

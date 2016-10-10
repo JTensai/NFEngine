@@ -195,7 +195,20 @@ public:
 		m_scale[3][3] = 1.f;
 		updateModel();
 	}
-	
+
+	glm::vec3 getForward() const {
+		return getModel() * glm::vec4(0, 0, -1, 0);
+		//return m_forward;
+	}
+	glm::vec3 getRight() const {
+		//return glm::cross(m_forward, m_up);
+		return getModel() * glm::vec4(1, 0, 0, 0);
+		//return glm::rotateY(m_forward, (float)glm::radians(90.f));
+	}
+	glm::vec3 getUp() const {
+		return getModel() * glm::vec4(0, 1, 0, 0);
+	}
+
 	~Transform() {};
 private:
 

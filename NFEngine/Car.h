@@ -22,5 +22,9 @@ private:
 	bool wheels_snap_to_rotation = false;
 	float wheel_angle = 0.f;
 	float wheel_angle_last_frame = wheel_angle;
+	const float acceleration = 0.001f;
+	float velocity = 0.f;
+	const float max_speed = 0.1f;
+
 };
 
